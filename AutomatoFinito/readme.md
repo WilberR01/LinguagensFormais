@@ -1,6 +1,10 @@
 # Especificação Técnica: Controlador de Requisições Automatizadas
 
-Este documento consolida as definições de entrada, configuração e estados da máquina de estados finitos (FSM) para o controlador de requisições.
+Este projeto representa uma versão simplificada do que seria um controlador de requisições automatizadas, 
+normalmente utilizado dentro de servidores de webhooks, serviços de scraping ou serviços de despacho de atividades e marketing em centrais.
+
+O sistema recebe um conjunto de instruções que pode ou não formar um loop e uma instrução de inicialização. Ao inicializar 
+o software requisitará um ponto da internet e salvará as informações em algum local predefinido.
 
 ## 1\. Definições de Entrada (Input)
 
