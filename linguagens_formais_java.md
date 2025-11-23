@@ -12,6 +12,8 @@ Documento em resposta às questões publicadas [neste repositório](https://gith
 - **C++:** Compila diretamente para código de máquina nativo, gerando executáveis específicos para cada arquitetura/sistema operacional. Não é portável sem recompilação.
 - **Java:** O compilador (`javac`) gera **bytecode** (`.class`), interpretado pela **JVM**, que traduz para código nativo em tempo de execução. Isso garante portabilidade ("write once, run anywhere").
 
+C++ compila o código diretamente para a linguagem executável do sistema operacional direcionado. Já o Java gera um arquivo em bytecode que é interpretado por uma JVM e ela mesma já faz o processo de compilação durante a execução, com a ajuda também da otimização JIT que deixa as partes mais acessadas do código compiladas na liguagem base do SO para melhor desempenho.
+
 ---
 
 ### 2. Fases de análise do compilador `javac`
