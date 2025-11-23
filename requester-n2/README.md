@@ -46,11 +46,11 @@ Este ciclo constrói o objeto da requisição HTTP.
 1.  **Definição de Método** $\rightarrow$ `GET` / `POST` / etc.
 2.  **Definição da URL** $\rightarrow$ Validação de formato URL.
 3.  **Gestão de Headers?**
-      * **Se Sim:** Entra no [Ciclo Cadastro Header](https://www.google.com/search?q=%2333-ciclo-cadastro-header-sub-rotina).
+      * **Se Sim:** Entra no [Ciclo Cadastro Header].
       * **Se Não:** Avança.
 4.  **Definição do Body** $\rightarrow$ Input de dados (se método permitir).
 5.  **Revisão/Confirmação**
-      * **Sim:** Vai para [Ciclo Configurações](https://www.google.com/search?q=%2334-ciclo-configura%C3%A7%C3%B5es-defini%C3%A7%C3%A3o-do-comportamento).
+      * **Sim:** Vai para [Ciclo Configurações].
       * **Não:** Menu de edição (escolher passo numérico para editar) $\rightarrow$ Retorna à Revisão.
 
 ### 3.3. Ciclo Cadastro Header (Sub-rotina)

@@ -1,0 +1,24 @@
+# Logs
+requester-n2/logs
+*.log
+requester-n2/npm-debug.log*
+requester-n2/yarn-debug.log*
+requester-n2/yarn-error.log*
+requester-n2/pnpm-debug.log*
+requester-n2/lerna-debug.log*
+
+requester-n2/node_modules
+requester-n2/dist
+requester-n2/dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
