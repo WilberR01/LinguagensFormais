@@ -1,0 +1,1 @@
+import '../index.css' // ajuste o caminho se necessário

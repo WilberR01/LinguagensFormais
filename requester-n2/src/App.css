@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Modern light theme for the app */
+:root{
+  --bg: #f6f9fc;
+  --panel: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --accent-start: #6366f1;
+  --accent-end: #06b6d4;
+  --glass: rgba(15,23,42,0.04);
+  --radius: 12px;
+  --container-width: 1100px;
+  --shadow: 0 10px 30px rgba(16,24,40,0.06);
 }
 
+html,body,#root{
+  height:100%;
+  background: linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+  color:var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  margin:0;
+  padding:0;
+}
+
+/* Root container */
+#root {
+  max-width: var(--container-width);
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+}
+
+/* Logo */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 4.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+  display:inline-grid;
+  place-items:center;
+  transition: transform 220ms ease, filter 220ms ease;
+  will-change: transform, filter;
+  box-shadow: var(--shadow);
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: translateY(-6px) scale(1.02);
+  filter: drop-shadow(0 10px 30px rgba(99,102,241,0.18));
 }
 
+/* Subtle spin on second logo (keep accessible to reduced motion prefs) */
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
-
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  a:nth-of-type(2) .logo { animation: logo-spin infinite 18s linear; }
 }
 
+/* Card */
 .card {
-  padding: 2em;
+  background: var(--panel);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15,23,42,0.04);
+  margin-top: 1rem;
 }
 
+/* Headings / text */
+h1, h2, h3 { color: var(--text); margin: 0 0 0.5rem 0; }
+p { color: var(--muted); margin: 0 0 1rem 0; }
+
+/* Read the docs small helper */
 .read-the-docs {
-  color: #888;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.6rem 1rem;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  color:#fff;
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  box-shadow: 0 8px 24px rgba(99,102,241,0.12);
+  transition: transform .12s, box-shadow .12s, opacity .12s;
+}
+.btn:hover{ transform: translateY(-3px); }
+
+/* Card padding utility */
+.card--center { text-align:center; padding:2rem; }
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+  #root { margin: 1rem; padding: 1rem; }
+  .logo { height:3.5rem; }
+  .card { padding: 0.9rem; }
 }
