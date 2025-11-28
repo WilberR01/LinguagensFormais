@@ -31,7 +31,7 @@ Parâmetros que ditam o comportamento do agente durante a execução:
   * **Throttling (Delay entre requisições):**
       * **Tempo:** Segundos (Tempo de espera antes de iniciar a requisição ou entre retentativas).
 
-## 3\. Máquina de Estados (Fluxos Completos)
+## 3\. Fluxos de Estados
 
 ### 3.1. Estado Inicial: Abertura
 
